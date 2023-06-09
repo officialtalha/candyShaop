@@ -13,6 +13,13 @@ label {
     color: black;
     font-weight: 600;
 }
+#buyButton{
+    margin-top: 12px;
+}
+
+td{
+    font-weight: 600;
+}
 
 .titleName{
     color: black;

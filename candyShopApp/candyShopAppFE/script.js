@@ -58,7 +58,6 @@ form.addEventListener('submit', async (e) => {
 
         //appending input and buy button to td5
         td5.appendChild(input);
-        td5.appendChild(buyButton);
 
         //table data appending to table row
         tr1.appendChild(td1);
@@ -66,9 +65,24 @@ form.addEventListener('submit', async (e) => {
         tr1.appendChild(td3);
         tr1.appendChild(td4);
         tr1.appendChild(td5);
+        tr1.appendChild(buyButton);
 
         //appending table row(tr1) to table body
         tableBody.appendChild(tr1);
+
+        buyButton.onclick = async () => {
+            const getquantity = document.querySelector('#buyQuantityText').value;
+            const finalQuantity = totalquantity - getquantity;
+            console.log(getquantity);
+            // const obj = {
+            //     name: result.data[i].name,
+            //     description: result.data[i].description,
+            //     price: result.data[i].price,
+            //     quantity: finalQuantity
+            // };
+            // console.log(obj);
+            // const result = await axios.put(`https://crudcrud.com/api/69e092423871413ebe4b4670fe73b179/shop/${id}`, obj);
+        }
     } catch (err) {
         console.log(err);
     }
@@ -101,9 +115,12 @@ const getRefresh = async () => {
 
             let td5 = document.createElement('td');
             td5.id = 'td5';
-
+            //------------------
             const id = result.data[i]._id;
-            const quantity = result.data[i].quantity;
+            const totalquantity = result.data[i].quantity;
+            const name = result.data[i].name;
+            const description = result.data[i].description;
+            const price = result.data[i].price;
             //input text for the buy quantity
             let input = document.createElement('input');
             input.type = 'text';
@@ -117,12 +134,11 @@ const getRefresh = async () => {
             let buyButton = document.createElement('button');
             buyButton.id = 'buyButton';
             buyButton.type = 'submit';
-            buyButton.className = 'btn btn-primary';
+            buyButton.className = 'btn btn-dark';
             buyButton.appendChild(document.createTextNode('Buy'));
 
             //appending input and buy button to td5
             td5.appendChild(input);
-            td5.appendChild(buyButton);
 
             //table data appending to table row
             tr1.appendChild(td1);
@@ -130,23 +146,21 @@ const getRefresh = async () => {
             tr1.appendChild(td3);
             tr1.appendChild(td4);
             tr1.appendChild(td5);
+            tr1.appendChild(buyButton);
 
             //appending table row(tr1) to table body
             tableBody.appendChild(tr1);
 
             buyButton.onclick = async () => {
-                const getquantity = document.getElementById('buyQuantityText').value;
-                const totalquantity = quantity;
+                const getquantity = document.querySelector('#buyQuantityText').value;
                 const finalQuantity = totalquantity - getquantity;
-                console.log(getquantity);
-                // const obj = {
-                //     name: result.data[i].name,
-                //     description: result.data[i].description,
-                //     price: result.data[i].price,
-                //     quantity: finalQuantity
-                // };
-                // console.log(obj);
-                // const result = await axios.put(`https://crudcrud.com/api/69e092423871413ebe4b4670fe73b179/shop/${id}`, obj);
+                const obj = {
+                    name,
+                    description,
+                    price,
+                    quantity: finalQuantity
+                };
+                const result = await axios.put(`https://crudcrud.com/api/69e092423871413ebe4b4670fe73b179/shop/${id}`, obj);
             }
 
         }
