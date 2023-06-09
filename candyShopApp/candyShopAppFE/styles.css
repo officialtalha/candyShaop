@@ -1,0 +1,28 @@
+body {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+}
+
+.container {
+    margin-top: 50px;
+    /* text-align: center; */
+    color: white;
+}
+
+label {
+    color: black;
+    font-weight: 600;
+}
+
+.titleName{
+    color: black;
+    text-align: center;
+}
+.candy-form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
