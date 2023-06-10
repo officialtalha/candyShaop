@@ -20,10 +20,19 @@ label {
 td {
     font-weight: 600;
 }
-
+#face{
+    color: black;
+}
 #dltbtn{
-    font-size: 1 px;
     margin-top: -2px;
+    height: 32px;
+    margin-bottom: 1px;
+    width: 43px;
+}
+#plusTen1{
+    height: 32px;
+    margin-right: 6px;
+    margin-bottom: 2px;
 }
 
 .titleName {
@@ -37,4 +46,7 @@ td {
 
 .btn-primary {
     margin-top: 20px;
+}
+.spanClass{
+    font-family: 'Indie Flower', cursive;
 }

@@ -5,22 +5,25 @@
     <title>Candy Shop</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <div class="container">
         <h1 class="titleName">
-            <span style="color:red;">C</span>
-            <span style="color: orange;">a</span>
-            <span style="color: yellow;">n</span>
-            <span style="color:green;">d</span>
-            <span style="color:blue;">y</span>
-            <span>(`,`)</span>
-            <span style="color:indigo;">S</span>
-            <span style="color:violet;">h</span>
-            <span style="color:red;">o</span>
-            <span style="color:orange;">p</span>
+            <span class="spanClass" style="color:red;">C</span>
+            <span class="spanClass" style="color: orange;">a</span>
+            <span class="spanClass" style="color: yellow;">n</span>
+            <span class="spanClass" style="color:green;">d</span>
+            <span class="spanClass" style="color:blue;">y</span>
+            <span class="spanClass" id="face">(`,`)</span>
+            <span class="spanClass" style="color:indigo;">S</span>
+            <span class="spanClass" style="color:violet;">h</span>
+            <span class="spanClass" style="color:red;">o</span>
+            <span class="spanClass" style="color:orange;">p</span>
         </h1>
         <form id="form1">
             <div class="candy-form">
@@ -51,7 +54,7 @@
         <table class="table mt-4">
             <thead>
                 <tr>
-                    <th> Items </th>
+                    <th> Actions </th>
                     <th>Candy Name</th>
                     <th>Candy Description</th>
                     <th>Candy Price</th>
