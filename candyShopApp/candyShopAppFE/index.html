@@ -4,38 +4,54 @@
 <head>
     <title>Candy Shop</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <div class="container">
-        <h1 class="titleName">Candy Shop</h1>
+        <h1 class="titleName">
+            <span style="color:red;">C</span>
+            <span style="color: orange;">a</span>
+            <span style="color: yellow;">n</span>
+            <span style="color:green;">d</span>
+            <span style="color:blue;">y</span>
+            <span>(`,`)</span>
+            <span style="color:indigo;">S</span>
+            <span style="color:violet;">h</span>
+            <span style="color:red;">o</span>
+            <span style="color:orange;">p</span>
+        </h1>
         <form id="form1">
             <div class="candy-form">
                 <div class="form-group">
                     <label for="candy-name">Candy Name:</label>
-                    <input type="text" id="candy-name" class="form-control" name="name" placeholder="Enter candy name" required>
+                    <input type="text" id="candy-name" class="form-control" name="name" placeholder="Enter candy name"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="candy-description">Candy Description:</label>
-                    <input type="text" id="candy-description" class="form-control" name="description" placeholder="Enter candy description"
-                        required>
+                    <input type="text" id="candy-description" class="form-control" name="description"
+                        placeholder="Enter candy description" required>
                 </div>
                 <div class="form-group">
                     <label for="candy-price">Candy Price:</label>
-                    <input type="text" id="candy-price" class="form-control" name="price" placeholder="Enter candy price" required>
+                    <input type="text" id="candy-price" class="form-control" name="price"
+                        placeholder="Enter candy price" required>
                 </div>
                 <div class="form-group">
                     <label for="candy-quantity">Candy Quantity:</label>
-                    <input type="text" id="candy-quantity" class="form-control" name="quantity" placeholder="Enter candy quantity"
-                        required>
+                    <input type="text" id="candy-quantity" class="form-control" name="quantity"
+                        placeholder="Enter candy quantity" required>
                 </div>
-                <button type="submit" class="btn btn-primary" id="add-item-btn">Add Item</button>
+                <button type="submit" class="btn btn-outline-info btn-sm    " id="add-item-btn">Add Item</button>
+                <button type="reset" class="btn btn-outline-danger btn-sm    " id="add-item-btn">clear all</button>
             </div>
         </form>
         <table class="table mt-4">
             <thead>
                 <tr>
+                    <th> Items </th>
                     <th>Candy Name</th>
                     <th>Candy Description</th>
                     <th>Candy Price</th>
